@@ -1,0 +1,78 @@
+.nav {
+  background-color: rgb(197, 255, 236);
+  border-radius: 5px;
+  grid-area: n;
+  letter-spacing: 1.8px;
+  padding: 0rem 1rem 1rem 1rem;
+  font-size: 1.2rem;
+}
+.nav div {
+  margin-top: 1.7rem;
+}
+.itemLink, .active {
+  text-decoration: none;
+  font-weight: bold
+} 
+.itemLink, .friends, .friendsTitle {
+  color: rgba(121, 90, 117, 0.825);
+}
+.active {
+  color: rgb(134, 113, 194);
+}
+
+.friends {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+.friends div {
+  margin-top: 0px
+}
+.friendsAvatars{
+  display: flex;
+}
+.friendsTitle {
+  margin: 0px;
+}
+.friendsSection {
+  padding-top: 50px
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .nav{
+    display: none;
+    background-color: rgb(219, 253, 241);
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 50%;
+    z-index: 100;
+    font-size: 1rem;
+  }
+  .nav.open {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+    box-shadow: 1px 2px 3px rgba(222, 9, 219, 0.666);
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    top: 120px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 101
+  }
+  .friendsSection {
+    padding-top: 10px
+  }
+  .friendsTitle {
+    font-size: 1rem;
+  }
+  .friends {
+    font-size: 0.6rem;
+  }
+}

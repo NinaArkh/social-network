@@ -1,0 +1,42 @@
+.descriptionBlock {
+  padding: 0.9rem;
+  display: flex;
+  align-items: end;
+}
+
+.profilePhoto {
+  border-radius: 20px;
+  box-shadow: 1px 2px 5px rgba(134, 50, 50, 0.6);
+  width: 150px;
+  margin-bottom: 20px
+}
+p, .fullName {
+  font-weight: bold;
+  color: rgb(84, 74, 63);
+  margin-top: 25px
+}
+
+.inputField, .inputField::-webkit-file-upload-button{
+  visibility:hidden
+}
+.labelField {
+  cursor: pointer
+}
+.editButton{
+  margin-left: 30px;
+  margin-bottom: 20px
+}
+.statusSection {
+  padding: 10px
+}
+.nickname {
+  color: rgb(132, 14, 128);
+  font-style: italic;
+}
+@media(max-width: 700px) {
+  .editButton{
+    padding: 4px 6px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+}

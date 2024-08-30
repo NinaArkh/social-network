@@ -1,0 +1,73 @@
+.topSection {
+  grid-area: h;
+  background-color: rgba(252, 236, 187, 0.463);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoTitleWrapper {
+  display: flex;
+  align-items: center;
+}
+.title {
+  font-size: 40px;
+  padding-left: 20px;
+  color: rgb(71, 48, 77);
+  text-shadow:  2px 8px 6px rgba(255, 182, 146, 0.844),
+  0px -5px 35px rgba(255,255,255,0.3);
+}
+.logo {
+  height: 135px;
+  margin-left: 0.1rem;
+  border-radius: 20px;
+  box-shadow: 1px 2px 6px rgb(0, 0, 0, 0.6);
+}
+
+.loginBlock {
+  float: right;
+  padding: 20px 30px 0px 0px;
+}
+.nickname {
+font-size: 18px;
+color: rgb(71, 48, 77);
+cursor: pointer
+}
+
+.loginButton{
+  color: rgb(71, 48, 77);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 1.3px;
+}
+
+.logoutButton {
+  display: block;
+  padding: 6px 5px;
+  background-color: rgb(255, 234, 252);
+  box-shadow: 1px 2px 5px rgb(0, 0, 0, 0.4);
+  cursor: pointer
+}
+
+@media (max-width: 700px) {
+  .title{
+    font-size: 1.3rem;
+  }
+  .logo {
+    height: 80px
+  }
+  .loginBlock{
+    float: right;
+    padding: 2px
+  }
+  .nickname {
+    font-size: 10px
+  }
+  .logoutButton {
+    margin-top: 1px;
+    padding: 2px;
+    font-size: 8px;
+  }
+
+}

@@ -1,0 +1,40 @@
+
+.dialogs {
+  display: grid;
+  grid-template-columns: 3fr 10fr;
+  padding: 1rem;
+}
+.dialogsItems {
+  margin-right: 20px;
+}
+.texting {
+  margin-top: 20px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid rgba(225, 129, 118, 0.6);
+}
+.texting:focus {
+outline: none;
+border: 2px solid rgba(225, 129, 118, 0.6);
+text-indent: 8px;
+}
+.texting::placeholder {
+  text-indent: 8px;
+}
+.errorMessage {
+  color: rgb(73, 89, 73);
+  font-style: italic;
+  margin:10px;
+  display: inline;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius:5px;
+  background-color: rgba(197, 255, 236, 0.895);
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 1px 2px 4px rgb(0, 0, 0, 0.2);
+  color: rgba(87, 69, 85, 0.825);
+  font-weight: bold
+}

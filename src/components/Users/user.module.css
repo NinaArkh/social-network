@@ -1,0 +1,59 @@
+
+.userProfile {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px 5px 10px
+}
+
+.userPhoto {
+  border-radius: 45%;
+  width: 100px
+}
+.leftBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonDiv button {
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
+  border: none;
+  background-color: rgb(220, 249, 232);
+  font-size: 1rem;
+  padding: 10px;
+  margin-top: 6px;
+  color: rgb(0, 45, 0);
+  transition: cursor 0.3s, background-color 0.3s
+}
+.buttonDiv button:hover {
+  background-color:  rgb(174, 248, 205);
+  cursor: pointer
+}
+.buttonDiv button:disabled {
+  background-color: rgb(223, 219, 219)
+}
+
+.middleBlock {
+  border: 1.5px solid rgb(147, 140, 140);
+  border-radius: 15px;
+  flex-basis: 85%;
+  padding: 10px 5px 20px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px
+}
+.userName {
+  font-size: 20px;
+  color: rgb(36, 13, 41)
+}
+.userStatus{
+color: rgb(36, 22, 22)
+}
+
+.rightBlock {
+  width: 130px;
+  margin-left: 10px;
+  text-align: end;
+}
