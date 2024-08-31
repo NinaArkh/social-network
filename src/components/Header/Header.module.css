@@ -61,6 +61,9 @@ cursor: pointer
     float: right;
     padding: 2px
   }
+  .loginButton {
+    font-size: 14px
+  }
   .nickname {
     font-size: 10px
   }

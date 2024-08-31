@@ -17,3 +17,11 @@
   background-color: rgb(190, 131, 131);
   border-radius: 3px
 }
+@media(max-width: 700px) {
+  .forwardBtn, .backBtn {
+    padding: 4px
+  }
+  .pagination {
+    font-size: 14px;
+  }
+}

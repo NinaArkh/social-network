@@ -33,28 +33,3 @@ const Users = (props) => {
 }
 
 export default Users
-
- /*
-                      props.toggleIsFollowingProgress(true, item.id)
-
-                    usersAPI.setUnfollow(item.id)
-                    .then(data => {
-                      if(data.resultCode === 0) {
-                          props.toggle(item.id)
-                      }
-                      props.toggleIsFollowingProgress(false, item.id)
-                    })
-                      */
-
-
-/*
-                    props.toggleIsFollowingProgress(true, item.id)
-
-                    usersAPI.setFollow(item.id)
-                    .then(data => {
-                      if(data.resultCode === 0) {
-                          props.toggle(item.id)
-                      }
-                      props.toggleIsFollowingProgress(false, item.id)
-                    })
-                      */

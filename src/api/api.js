@@ -23,12 +23,7 @@ export const usersAPI = {
   setUnfollow(userId) {
     return instance.delete(`follow/${userId}`)
     .then(response => response.data)
-  },
-  getProfile(userId) {
-    console.warn('Obsolete method! Please use profileAPI')
-    return profileAPI.getProfile(userId)
   }
-  
 }
 
 export const profileAPI = {
