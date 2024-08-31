@@ -32,13 +32,15 @@ const User = (props) => {
             <div className={styles.userName}> {props.item.name} </div>
             <div className={styles.userStatus}> {props.item.status} </div>
           </div>
-
-          <div className={styles.rightBlock}>
-            <div> {"item.location.city"}  </div>
-            <div> {"item.location.country"} </div>  
-          </div>
       </div> 
   )
 } 
 
 export default memo(User)
+
+/*
+<div className={styles.rightBlock}>
+  <div> {"item.location.city"}  </div>
+  <div> {"item.location.country"} </div>  
+</div>
+*/

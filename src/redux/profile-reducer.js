@@ -75,8 +75,6 @@ export const profileReducer = (state = initialState, action) => {
   return state
 }
 export default profileReducer
-// ...profile ИЛИ ...state.profile 
-
 
 export const updateNewPostTextActionCreator = (text) => {
   return {

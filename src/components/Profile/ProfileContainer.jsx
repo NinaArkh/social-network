@@ -18,9 +18,12 @@ class ProfileContainer extends React.Component {
   refreshProfile() {
     let userId = this.props.match.params.userId
 
-    if(!userId) {
+   /*  if(!userId) {
       userId = this.props.authorizedUserId
-    } 
+    } */
+      if(!userId) {
+        userId = 31456
+      } 
     
     this.props.getProfile(userId)
     this.props.getStatus(userId)
@@ -59,6 +62,6 @@ let mapStateToProps = (state) => {
 
 export default compose(
   connect(mapStateToProps, { getProfile: getProfileThunk, getStatus: getStatusThunk, updateStatus: updateStatusThunk, savePhoto: savePhotoThunk, saveProfile: saveProfileThunk}),
-  withRouter,
-  withAuthRedirect
+  withRouter
+  //withAuthRedirect
 )(ProfileContainer)

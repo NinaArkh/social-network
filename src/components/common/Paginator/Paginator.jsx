@@ -21,7 +21,8 @@ const Paginator = ({portionSize = 10, ...props}) => {
   return (
     <div className={styles.pagination}>
       {portionNumber > 1 &&
-      <button onClick={() => {setPortionNumber(portionNumber - 1)}}> back </button>
+      <button className={styles.backBtn}
+      onClick={() => {setPortionNumber(portionNumber - 1)}}> back </button>
       }
 
       {pages
@@ -36,7 +37,8 @@ const Paginator = ({portionSize = 10, ...props}) => {
       })}
 
       {portionCount > portionNumber &&
-        <button onClick={() => {setPortionNumber(portionNumber + 1)}}> forward </button>
+        <button className={styles.forwardBtn}
+        onClick={() => {setPortionNumber(portionNumber + 1)}}> forward </button>
       }
     </div>
   )

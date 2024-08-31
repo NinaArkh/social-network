@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import { NavLink } from 'react-router-dom'
 import cn from 'classnames'
 import style from './Navbar.module.css'
@@ -17,6 +17,8 @@ const Navbar = (props) => {
     {to: '/settings', label: 'Settings'}
   ]
   const [menuOpen, setMenuOpen] = useState(false)
+  const navRef = useRef(null)
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
@@ -24,11 +26,31 @@ const Navbar = (props) => {
     setMenuOpen(false)
   }
 
+  useEffect(() => {
+    if(menuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+    else {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [menuOpen])
+
+  const handleClickOutside = (e) => {
+    if(navRef.current && !navRef.current.contains(e.target)) {
+      closeMenu()
+    }
+  }
+
   return (
     <> 
     <img src={Hamburger} alt='Hamburger menu' className={style.hamburger} onClick={toggleMenu} />
 
-    <nav className= { cn(style.nav, {[style.open]: menuOpen}) } >
+    <nav ref={navRef} 
+         className= { cn(style.nav, {[style.open]: menuOpen}) } >
       {navItems.map(item => (
         <div key={item.to} className={style.itemLink}>
           <NavLink to={item.to}
